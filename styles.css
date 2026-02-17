@@ -1,0 +1,305 @@
+:root {
+    --text-fill-color: rgb(0, 0, 0);
+    --background-color: rgb(201, 201, 201); 
+}
+
+a {
+text-decoration: none;
+}
+
+a:link {color:green;}
+a:visited {color:rgb(42, 120, 165);}
+a:hover {color:darkgreen;} 
+a:active {color:green;}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins' ;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 50px;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #000000;
+}
+
+nav .left a{
+    font-size: 25px;
+    font-weight: 550;
+}
+
+nav .right a{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-fill-color);
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+/* Section 1: Me */
+.me-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 75px 0;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.me-section .text{
+    flex: 5;
+}
+
+.me-section .text h2 {
+    font-size: 40px;
+}
+
+.me-section .text .links {
+    margin-top: 40px;
+}
+
+.me-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--text-fill-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.me-section .text .links a:hover{
+    border: 2px solid darkgreen;
+}
+
+.me-section .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;      
+}
+
+.me-section .headshot img {
+    width: 435px;
+    border-radius: 55%;
+}
+
+/* Section 2: Skills */
+
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span{
+    font-size: 18px;
+}
+
+.skills-section .cells .cell i {
+    font-size: 28px;
+    display: block;
+}
+
+/* Section 3: Location */
+
+.location-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 100px
+}
+
+.location-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.location-section .group {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.location-section .group .text {
+    flex: 8;
+}
+
+.location-section .group > div {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: center;
+}
+
+.location-section .group img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 55%;
+    display: block;
+}
+
+.location-section .group p {
+    margin: 0;
+    padding: 0.5rem 0 0;
+}
+
+/* Section 4: Contact */
+
+.contact-section {
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+}
+
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: 'Poppins';
+    border: 2px solid var(--text-fill-color);
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button {
+    font-size:  16px;
+    font-family: 'Poppins';
+    color: var(--background-color);
+    background-color: var(--text-fill-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover {
+    filter: brightness(0.9);
+}
+
+@media (max-width:850px) {
+    .me-section .text h2 {font-size: 35px;}
+}
+
+@media (max-width:725px) {
+    .me-section {flex-direction: column-reverse;}  
+    .me-section .headshot img{ width: 300px;}
+
+    .location-section {text-align: center;}
+    .location-section .group {flex-direction: column;}
+
+    .contact-section .group {flex-direction: column;}
+}
+
+@media (max-width:600px) {
+    nav {padding: 0 20px;}
+    nav .right a:last-child {color: var(--text-fill-color);
+        background-color: var(--background-color);
+        padding: 0;}
+    nav .right a span {display:none;}
+
+    .me-section {padding: 0 20px;}
+    .me-section .text h2 {font-size: 30px;}
+
+    .skills-section {padding: 0 20px;}
+    .skills-section h2 {font-size: 30px;}
+    .skills-section .cells .cell span{ font-size: 16px;}
+
+    .location-section {padding: 0 20px;}
+    
+    .contact-section {padding: 0 20px;}
+    .contact-section .group form textarea {
+        max-width: 100%; 
+        max-height: 100%;
+    }
+}
+
