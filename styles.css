@@ -266,6 +266,15 @@ nav .right a:last-child {
     filter: brightness(0.9);
 }
 
+/* Section 5: Footer */
+
+.footer {
+    padding: 0 50px;
+    margin-bottom: 10px;
+}
+
+/* Section End */
+
 @media (max-width:850px) {
     .me-section .text h2 {font-size: 35px;}
 }
