@@ -266,6 +266,146 @@ nav .right a:last-child {
     filter: brightness(0.9);
 }
 
+/* Section 1: PM Overview */
+.pm-overview-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 75px 0;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.pm-overview-section .text {
+    flex: 1;
+}
+
+.pm-overview-section .text h2 {
+    font-size: 40px;
+}
+
+/* Section 2: PM Competencies */
+
+.pm-competencies-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.pm-competencies-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.pm-competencies-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pm-competencies-section .cells .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pm-competencies-section .cells .cell i {
+    font-size: 28px;
+}
+
+.pm-competencies-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* Section 3: PM Methodologies */
+
+.pm-methodologies-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.pm-methodologies-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.pm-methodologies-section .group {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pm-methodologies-section .group .methodology {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.pm-methodologies-section .group .methodology h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pm-methodologies-section .group .methodology ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pm-methodologies-section .group .methodology ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pm-methodologies-section .group .methodology ul li:last-child {
+    border-bottom: none;
+}
+
+/* Section 4: PM CTA */
+
+.pm-cta-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.pm-cta-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.pm-cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.pm-cta-section a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--text-fill-color);
+    color: var(--background-color);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.1s;
+}
+
+.pm-cta-section a:hover {
+    filter: brightness(0.9);
+}
+
 @media (max-width:850px) {
     .me-section .text h2 {font-size: 35px;}
 }
