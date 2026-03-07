@@ -7,10 +7,10 @@ a {
 text-decoration: none;
 }
 
-a:link {color:blue;}
-a:visited {color:rgb(124, 200, 231)}
-a:hover {color: rgb(46, 175, 250);} 
-a:active {color:rgb(0, 0, 145);}
+a:link {color:rgb(50, 200, 250);}
+a:visited {color:rgb(100, 200, 240)}
+a:hover {color: rgb(50, 175, 250);} 
+a:active {color:rgb(100, 175, 230);}
 
 *{
     margin: 0;
