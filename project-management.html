@@ -14,39 +14,47 @@
 
     <title>Project Management - Christian Rapp</title>
 
+<!-- NavBar -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>    
 
 <body>
 
-<!-- NavBar -->
+    
+<!--Nav bar-->
 
-    <nav>
-    <div class="left">
-        <a href="index.html">Christian Rapp</a>
-    </div>
-    <div class="right">
-        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>Linkedin</span>
-        </a>
-        <a href="mailto:christianrapp12@gmail.com" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email</span>
-        </a>
-    </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
-    <main>
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+
+<main>
 
 <!-- Section 1: Overview -->
 
         <section class="pm-overview-section">
             <div class="text">
                 <h2>Project Management<br> Expertise 📋</h2><br>
-                <p>I have developed comprehensive project management skills through my academic coursework in Information Systems and Technology, as well as practical experience. I am proficient in planning, executing, and monitoring projects across multiple methodologies including both Agile and traditional approaches. My experience encompasses scope management, resource allocation, timeline development, and stakeholder communication.</p>
+                    <p>I have developed strong project management skills through my coursework in Information Systems and Technology. 
+                        Such as planning, executing, and monitoring projects using Agile and traditional methodologies. 
+                        My background includes scope, resource, timeline, and stakeholder management.<br>
+                        <br>I am currently pursuing the Certified Associate in Project Management (CAPM), which will further my knowledge and skills.
+                    </p>
                 <br>
-                <h3>Certified Associate in Project Management (CAPM)</h3>
-                <p>Expected Spring 2026</p>
+                <div class="capm">
+                    <div class="capm-text">
+                        <h3>Certified Associate in Project Management (CAPM)</h3>
+                        <p>Expected Spring 2026</p>
+                    </div>
+                    <div class="certification">
+                        <img src="Images/PMI Logo.jpg" alt="Project Management Institute Logo">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -73,11 +81,6 @@
                 </div>
                 
                 <div class="cell">
-                    <i class="fa-solid fa-handshake"></i>
-                    <span>Stakeholder Management</span>
-                </div>
-                
-                <div class="cell">
                     <i class="fa-solid fa-chart-pie"></i>
                     <span>Resource Allocation</span>
                 </div>
@@ -87,25 +90,11 @@
                     <span>Risk Management</span>
                 </div>
 
-                <div class="cell">
-                    <i class="fa-solid fa-comments"></i>
-                    <span>Communication</span>
-                </div>
-
-                <div class="cell">
-                    <i class="fa-solid fa-bug"></i>
-                    <span>Issue Tracking</span>
-                </div>
-
-                <div class="cell">
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>Agile/Scrum</span>
-                </div>
             </div>
         </section>
 
 
-<!-- Section 3: Methodologies -->
+<!-- Methodologies Section-->
 
         <section class="pm-methodologies-section">
             <h2>Methodologies & Tools</h2><br>
@@ -131,15 +120,6 @@
                     </ul>
                 </div>
 
-                <div class="methodology">
-                    <h3>Tools & Software</h3>
-                    <ul>
-                        <li>Project Management Tools</li>
-                        <li>Documentation</li>
-                        <li>Collaboration Platforms</li>
-                        <li>Tracking Systems</li>
-                    </ul>
-                </div>
             </div>
         </section>
 

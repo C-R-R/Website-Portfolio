@@ -20,38 +20,35 @@
 
     <title>Christian Rapp - Portfolio</title>
 
+<!-- Loads JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>    
 
 <body>
 
-<!-- NavBar -->
+<!-- 0: NavBar -->
 
-    <nav>
-    <div class="left">
-        <a href="index.html">Christian Rapp</a>
-    </div>
-    <div class="right">
-        <a href="http://linkedin.com/in/christian-r-rapp" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>Linkedin</span>
-        </a>
-        <a href="mailto:christianrapp12@gmail.com" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email</span>
-        </a>
+    <div id="nav-placeholder"></div>
 
-    </div>
-    </nav>
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+    </script>
 
-    <main>
+<main>
 
-
-<!-- Section 1: Me -->
+<!-- 1: Me Section -->
 
         <section class="me-section">
-            <div class="text">
-                <h2>Hello World,<br> my name is Christian 👋</h2><br>
-                <p>I am a recent ODU Information Systems and Technology graduate. My coursework was in key areas such as software engineering, systems analysis, database management, network engineering, and e-business. I also gained a broad understanding of business fundamentals, including accounting, finance, economics, international business, management, marketing, and quantitative methods.</p>
+            <div class="text"> 
+                <h1>My name is Christian</h1>
+                <h2><i>Systems & Technology Specialist</i></h2><br>
+                <p> I recentely graduated from Old Dominion University, where my coursework was in key areas such as software engineering, systems analysis, database management, network engineering, and e-business. 
+                    I also gained a broad understanding of business fundamentals, including accounting, finance, economics, international business, management, marketing, and quantitative methods.
+                </p>
                 
             </div>
 
@@ -62,63 +59,97 @@
         </section>
 
 
-<!-- Section 2: Skills -->
+<!-- 2: Skills Section -->
 
         <section class="skills-section">
             <h2>Skills</h2><br>
 
             <div class="cells">
+
+                <div class="cell">
+                    <a href="web-development.html">
+                        <center><i class="fa-solid fa-code"></i></center>
+                        <span>Web Development</span>
+                    </a>
+                </div>
+
                 <div class="cell">
                     <a href="project-management.html">
-                        <i class="fa-solid fa-clipboard"></i>
+                        <center><i class="fa-solid fa-clipboard"></i></center>
                         <span>Project Management</span>
                     </a>
                 </div>
 
                 <div class="cell">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <span>Business Analysis</span>
-                </div>
-                
-                <div class="cell">
-                    <i class="fa-solid fa-computer"></i>
-                    <span>Tech Support</span>
-                </div>
-                
-                <div class="cell">
-                    <i class="fa-solid fa-users"></i>
-                    <span>Agile Methodologies</span>
-                </div>
-                
-                <div class="cell">
-                    <i class="fa-solid fa-database"></i>
-                    <span>SQL</span>
-                </div>
-                
-                <div class="cell">
-                    <i class="fa-solid fa-face-smile"></i>
-                    <span>Customer Service</span>
+                    <a href="data-analysis.html">
+                        <center><i class="fa-solid fa-chart-bar"></i></center>
+                        <span>Data Analysis</span>
+                    </a>
                 </div>
 
                 <div class="cell">
-                    <i class="fa-brands fa-html5"></i>
-                    <span>HTML</span>
+                    <a href="systems-analysis.html">
+                        <center><i class="fa-solid fa-chart-line"></i></center>
+                        <span>Systems Analysis</span>
+                    </a>
                 </div>
 
                 <div class="cell">
-                    <i class="fa-brands fa-css"></i>
-                    <span>CSS</span>
+                    <a href="customer-service.html">
+                        <center><i class="fa-solid fa-face-smile"></i></center>
+                        <span>Customer Support</span>
+                    </a>
                 </div>
-
-                <div class="cell">
-                    <i class="fa-solid fa-code"></i>
-                    <span>Python</span>
-                </div>
+                
             </div>
         </section>
 
 
-<!-- Section 3: Location -->
+<!-- 3: Education Section -->
+
+        <section class="education-section">
+            <h2>Education</h2> <br>
+            
+            <div class="group">
+                
+                <div class="cell">
+                    <h3>Old Dominion University</h3>
+                    <div>Bachelor of Science in Business Administration<br>
+                    Major in Information Systems and Technology <br>
+                    Graduated Decemeber 2025
+                    </div>
+                </div>
+
+                <div class="odu-logo">
+                    <img src="Images/ODU Logo.jpg" alt="ODU Logo">
+                </div>
+
+            </div>
+        </section>
+
+
+<!-- 4: Experience Section -->
+
+        <section class="experience-section">
+            <h2>Experience</h2><br>
+
+            <div class="group">
+
+                <div class="cell">
+                    <h3>The Home Depot</h3>
+                    Pro Desk and Special Services Associate <br>
+                    Norfolk, VA | Oct 2018 - Dec 2022 <br>
+                </div>
+
+                <div class="thd-logo">
+                    <img src="Images/THD Logo.jpg" alt="THD Logo">
+                </div>
+
+            </div>
+        </section>
+          
+
+<!-- 5: Location Section -->
 
         <section class="location-section">
                 <h2>Located in Florida</h2><br>
@@ -141,7 +172,7 @@
         </section>
 
 
-<!-- Section 4: Contact -->
+<!-- 6: Contact Section -->
 
         <section class="contact-section">
                 <h2>Contact Me</h2><br>
@@ -165,5 +196,10 @@
         </section>
         
     </main>
+<footer>
+  <p>Author: Christian Rapp<br>
+  </p>
+</footer>
+
 </body>
 </html>

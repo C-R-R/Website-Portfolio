@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Web Development - Christian Rapp</title>
+
+<!-- NavBar -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>    
+
+<body>
+
+    
+<!--Nav bar-->
+
+    <div id="nav-placeholder"></div>
+
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+
+<main>
+
+<!-- Section 1: Overview -->
+
+        <section class="wd-overview-section">
+            <div class="text">
+                <h2>Web Development<br> Expertise 💻</h2><br>
+                <p>My ODU coursework provided me with a strong foundation in web development, covering both front-end and back-end technologies.
+                    I created this website portfolio to showcase my abilities with HTML, CSS, and JavaScript. 
+                    I used Visusal Studio Code for development, GitHub for version control and deployment, and Cloudflare for hosting. 
+                    I will continually update this portfolio to reflect my growth and new projects.</p>
+                </p>
+            </div>
+        </section>
+
+
+<!-- Section 2: Core Competencies -->
+
+        <section class="wd-competencies-section">
+            <h2>Core Competencies</h2><br>
+
+            <div class="cells">
+                <div class="cell">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                
+                <div class="cell">
+                    <i class="fa-brands fa-css"></i>
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                
+                <div class="cell">
+                    <i class="fa-solid fa-paint-brush"></i>
+                    <span>UI/UX</span>
+                </div>
+
+                <div class="cell">
+                    <i class="fa-solid fa-bug"></i>
+                    <span>Debugging</span>
+                </div>
+
+            </div>
+        </section>
+
+
+<!-- Tools Section -->
+
+        <section class="wd-tools-section">
+
+            <div class="group">
+
+                <div class="tools">
+                    <h3>Development Tools</h3>
+                    <ul>
+                        <li><b>VS Code:</b> Coding, Design, Debugging</li>
+                        <li><b>Git & GitHub:</b> Version Control, Collaboration, Deployment</li>
+                        <li><b>Cloudflare:</b> Hosting, DNS Management, Security</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

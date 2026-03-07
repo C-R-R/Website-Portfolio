@@ -1,17 +1,16 @@
 :root {
-    --text-fill-color: rgb(0, 0, 0);
-    --background-color: rgb(201, 201, 201); 
+    --text-fill-color: rgb(25, 25, 25);
+    --background-color: rgb(255, 255, 255);
 }
 
 a {
 text-decoration: none;
 }
 
-a:link {color:green;}
-a:visited {color:rgb(42, 120, 165);}
-a:hover {color:darkgreen;} 
-a:active {color:green;}
-
+a:link {color:blue;}
+a:visited {color:rgb(124, 200, 231)}
+a:hover {color: rgb(46, 175, 250);} 
+a:active {color:rgb(0, 0, 145);}
 
 *{
     margin: 0;
@@ -25,12 +24,15 @@ html {
 
 body {
     font-family: 'Poppins' ;
+    color: var(--text-fill-color);
     background-color: var(--background-color);
     max-width: 1400px;
     margin: 0 auto;
 }
 
+
 /* Navbar */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,7 +44,7 @@ nav {
     left: 0;
     right: 0;
     width: 100vw;
-    background-color: #000000;
+    background-color: var(--text-fill-color);
 }
 
 nav .left a{
@@ -63,40 +65,27 @@ nav .right a:last-child {
     border-radius: 5px;
 }
 
-/* Section 1: Me */
+
+/* Me Section */
 .me-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     margin: 75px 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     gap: 50px;
 }
 
 .me-section .text{
     flex: 5;
 }
-
-.me-section .text h2 {
+.me-section .text h1 {
     font-size: 40px;
 }
 
-.me-section .text .links {
-    margin-top: 40px;
-}
-
-.me-section .text .links a{
-    display: inline-block;
-    padding: 5px 10px;
-    border: 2px solid var(--text-fill-color);
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.me-section .text .links a:hover{
-    border: 2px solid darkgreen;
+.me-section .h2 {
+    font-size: 10px;
 }
 
 .me-section .headshot{
@@ -106,15 +95,18 @@ nav .right a:last-child {
 }
 
 .me-section .headshot img {
-    width: 435px;
+    width: 400px;
+    max-width:fit-content;
+    height: auto;
     border-radius: 55%;
 }
 
-/* Section 2: Skills */
+
+/* Skills Section */
 
 .skills-section {
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .skills-section h2 {
@@ -145,6 +137,13 @@ nav .right a:last-child {
     border: 1.5px solid var(--text-fill-color);
     border-radius: 5px;
     text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-section .cells .cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
 }
 
 .skills-section .cells .cell img {
@@ -163,17 +162,105 @@ nav .right a:last-child {
     display: block;
 }
 
-/* Section 3: Location */
+
+/* Education Section */
+
+.education-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+.education-section h2 {
+    font-size: 35px;
+}
+
+.education-section .group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.education-section .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.education-section .odu-logo {
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+}
+
+.education-section .odu-logo img {
+    width: 165px;
+    max-width: fit-content;
+    height: auto;
+    border-radius: 10%;
+}
+
+
+/* Experience Section */
+
+.experience-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+.experience-section h2 {
+    font-size: 35px;
+}
+
+.experience-section .group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience-section .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.experience-section .thd-logo {
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+}
+
+.experience-section .thd-logo img {
+    width: 150px;
+    max-width: fit-content;
+    height: auto;
+    border-radius: 10%;
+}
+
+/* Location Section */
 
 .location-section {
     text-align: center;
     padding: 0 50px;
-    margin-bottom: 100px
+    margin-bottom: 75px
 }
 
 .location-section h2 {
     font-size: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .location-section .group {
@@ -211,7 +298,8 @@ nav .right a:last-child {
     padding: 0.5rem 0 0;
 }
 
-/* Section 4: Contact */
+
+/* Contact Section */
 
 .contact-section {
     text-align: center;
@@ -244,7 +332,7 @@ nav .right a:last-child {
 .contact-section .group form textarea {
     font-family: 'Poppins';
     border: 2px solid var(--text-fill-color);
-    background-color: white;
+    background-color: rgb(250, 250, 250);
     padding: 10px;
     margin-bottom: 15px;
     outline: none;
@@ -266,14 +354,62 @@ nav .right a:last-child {
     filter: brightness(0.9);
 }
 
-/* Section 1: PM Overview */
+
+
+/* Responsive Design */
+
+@media (max-width:850px) {
+    .me-section .text h2 {font-size: 35px;}
+}
+
+@media (max-width:725px) {
+    .me-section {flex-direction: column-reverse;}  
+    .me-section .headshot img{ width: 300px;}
+
+    .location-section {text-align: center;}
+    .location-section .group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-section .group {flex-direction: column;}
+}
+
+@media (max-width:600px) {
+    nav {padding: 0 20px;}
+    nav .right a:last-child {color: var(--text-fill-color);
+        background-color: var(--background-color);
+        padding: 0;}
+    nav .right a span {display:none;}
+
+    .me-section {padding: 0 20px;}
+    .me-section .text h2 {font-size: 30px;}
+
+    .skills-section {padding: 0 20px;}
+    .skills-section h2 {font-size: 30px;}
+    .skills-section .cells .cell span{ font-size: 16px;}
+
+    .location-section {padding: 0 20px;}
+    
+    .contact-section {padding: 0 20px;}
+    .contact-section .group form textarea {
+        max-width: 100%; 
+        max-height: 100%;
+    }
+}
+
+
+
+
+
+/* Project Management Page */
 .pm-overview-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     margin: 75px 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     gap: 50px;
 }
 
@@ -285,7 +421,27 @@ nav .right a:last-child {
     font-size: 40px;
 }
 
-/* Section 2: PM Competencies */
+/* CAPM Certification */
+.capm {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+.capm .capm-text {
+    min-width: 220px;
+}
+
+.capm .certification img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* PM Competencies */
 
 .pm-competencies-section {
     padding: 0 50px;
@@ -325,7 +481,7 @@ nav .right a:last-child {
     font-size: 18px;
 }
 
-/* Section 3: PM Methodologies */
+/* PM Methodologies */
 
 .pm-methodologies-section {
     text-align: center;
@@ -342,12 +498,14 @@ nav .right a:last-child {
     display: flex;
     align-items: flex-start;
     gap: 50px;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .pm-methodologies-section .group .methodology {
-    flex: 1 1 250px;
+    flex: 0 0 auto;
+    width: max-content;
+    min-width: 220px;
     padding: 20px;
     border: 1.5px solid var(--text-fill-color);
     border-radius: 5px;
@@ -374,72 +532,461 @@ nav .right a:last-child {
     border-bottom: none;
 }
 
-/* Section 4: PM CTA */
 
-.pm-cta-section {
+
+
+
+
+/* Data Analysis Page */
+.da-overview-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 75px 0;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.da-overview-section .text {
+    flex: 1;
+}
+
+.da-overview-section .text h2 {
+    font-size: 40px;
+}
+
+/* DA Competencies */
+
+.da-competencies-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.da-competencies-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.da-competencies-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.da-competencies-section .cells .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.da-competencies-section .cells .cell i {
+    font-size: 28px;
+}
+
+.da-competencies-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* DA Methodologies */
+
+.da-methodologies-section {
     text-align: center;
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.pm-cta-section h2 {
+.da-methodologies-section h2 {
     font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.pm-cta-section p {
-    font-size: 18px;
     margin-bottom: 30px;
 }
 
-.pm-cta-section a {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--text-fill-color);
-    color: var(--background-color);
+.da-methodologies-section .group {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.da-methodologies-section .group .methodology {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1.5px solid var(--text-fill-color);
     border-radius: 5px;
-    font-weight: 600;
-    transition: 0.1s;
+    text-align: left;
 }
 
-.pm-cta-section a:hover {
-    filter: brightness(0.9);
+.da-methodologies-section .group .methodology h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-@media (max-width:850px) {
-    .me-section .text h2 {font-size: 35px;}
+.da-methodologies-section .group .methodology ul {
+    list-style: none;
+    padding: 0;
 }
 
-@media (max-width:725px) {
-    .me-section {flex-direction: column-reverse;}  
-    .me-section .headshot img{ width: 300px;}
-
-    .location-section {text-align: center;}
-    .location-section .group {flex-direction: column;}
-
-    .contact-section .group {flex-direction: column;}
+.da-methodologies-section .group .methodology ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width:600px) {
-    nav {padding: 0 20px;}
-    nav .right a:last-child {color: var(--text-fill-color);
-        background-color: var(--background-color);
-        padding: 0;}
-    nav .right a span {display:none;}
-
-    .me-section {padding: 0 20px;}
-    .me-section .text h2 {font-size: 30px;}
-
-    .skills-section {padding: 0 20px;}
-    .skills-section h2 {font-size: 30px;}
-    .skills-section .cells .cell span{ font-size: 16px;}
-
-    .location-section {padding: 0 20px;}
-    
-    .contact-section {padding: 0 20px;}
-    .contact-section .group form textarea {
-        max-width: 100%; 
-        max-height: 100%;
-    }
+.da-methodologies-section .group .methodology ul li:last-child {
+    border-bottom: none;
 }
+
+
+
+
+
+/* Systems Analysis Page */
+.sa-overview-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 75px 0;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.sa-overview-section .text {
+    flex: 1;
+}
+
+.sa-overview-section .text h2 {
+    font-size: 40px;
+}
+
+/* SA Competencies */
+
+.sa-competencies-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.sa-competencies-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.sa-competencies-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sa-competencies-section .cells .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sa-competencies-section .cells .cell i {
+    font-size: 28px;
+}
+
+.sa-competencies-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* SA Methodologies */
+
+.sa-methodologies-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.sa-methodologies-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.sa-methodologies-section .group {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sa-methodologies-section .group .methodology {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.sa-methodologies-section .group .methodology h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sa-methodologies-section .group .methodology ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sa-methodologies-section .group .methodology ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sa-methodologies-section .group .methodology ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+/* Web Development Page */
+.wd-overview-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 75px 0;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.wd-overview-section .text {
+    flex: 1;
+}
+
+.wd-overview-section .text h2 {
+    font-size: 40px;
+}
+
+/* WD Competencies */
+
+.wd-competencies-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.wd-competencies-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.wd-competencies-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wd-competencies-section .cells .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.wd-competencies-section .cells .cell i {
+    font-size: 28px;
+}
+
+.wd-competencies-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* WD Tools */
+
+.wd-tools-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.wd-tools-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.wd-tools-section .group {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wd-tools-section .group .tools {
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: 90vw;
+    padding: 20px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.wd-tools-section .group .tools h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.wd-tools-section .group .tools ul {
+    list-style: none;
+    padding: 0;
+}
+
+.wd-tools-section .group .tools ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wd-tools-section .group .tools ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+/* Customer Service Page */
+.cs-overview-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 75px 0;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.cs-overview-section .text {
+    flex: 1;
+}
+
+.cs-overview-section .text h2 {
+    font-size: 40px;
+}
+
+/* CS Competencies */
+
+.cs-competencies-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.cs-competencies-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.cs-competencies-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cs-competencies-section .cells .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cs-competencies-section .cells .cell i {
+    font-size: 28px;
+}
+
+.cs-competencies-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* CS Methodologies */
+
+.cs-methodologies-section {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.cs-methodologies-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.cs-methodologies-section .group {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cs-methodologies-section .group .methodology {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1.5px solid var(--text-fill-color);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.cs-methodologies-section .group .methodology h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cs-methodologies-section .group .methodology ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cs-methodologies-section .group .methodology ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cs-methodologies-section .group .methodology ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
 
