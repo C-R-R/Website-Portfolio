@@ -1166,7 +1166,7 @@ nav .right a:last-child {
     }
 
     .timeline-entry {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
 
@@ -1177,11 +1177,11 @@ nav .right a:last-child {
     .timeline-entry .timeline-logo {
         order: 2;
         align-self: flex-start;
-        margin-left: 30px;
+        margin-left: 18px;
     }
 
     .timeline-logo {
-        display: none;
+        display: flex;
     }
 
     .timeline-dot {
@@ -1189,7 +1189,7 @@ nav .right a:last-child {
     }
 
     .timeline-item:first-child {
-        margin-bottom: 15px;
+        margin-bottom: 0;
     }
 
     .timeline-item:nth-child(3) {
